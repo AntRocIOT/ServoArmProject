@@ -1,7 +1,7 @@
 #include "headers/workspace.h"
 
 
-vecEu calculateVector(point3pos p_ori,point3pos p_ext){
+vecEu calculateVectortwoPoints(point3pos p_ori,point3pos p_ext){
 
     vecEu resVec;
 
@@ -10,4 +10,10 @@ vecEu calculateVector(point3pos p_ori,point3pos p_ext){
     resVec.w_vec = p_ext.z_coord - p_ori.z_coord;
     
     return resVec;
+}
+
+vecUT calculateUnitVector(vecEu posVec,vecUT unitVec){
+    vecUT resUnit;
+    resUnit.i_vec = posVec.u_vec * unitVec.i_vec + posVec.v_vec * unitVec.j_vec + posVec.w_vec * unitVec.k_vec; 
+    return resUnit;
 }
