@@ -13,12 +13,11 @@ typedef struct vectorEuclidean{
     uint32_t w_vec;
 } vecEu;
 
-typedef struct vectorUnit{
-    uint32_t i_vec;
-    uint32_t j_vec;
-    uint32_t k_vec;
-} vecUT;
+typedef struct matrixRotation
+{
+   uint32_t rdmat[3][3];
+}matRot;
+
 
 vecEu calculateVectortwoPoints(point3pos p_ori,point3pos p_ext);
-vecUT calculateUnitVector(vecEu posVec,vecUT unitVec);
 #endif

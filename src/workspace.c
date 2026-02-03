@@ -12,8 +12,8 @@ vecEu calculateVectortwoPoints(point3pos p_ori,point3pos p_ext){
     return resVec;
 }
 
-vecUT calculateUnitVector(vecEu posVec,vecUT unitVec){
-    vecUT resUnit;
-    resUnit.i_vec = posVec.u_vec * unitVec.i_vec + posVec.v_vec * unitVec.j_vec + posVec.w_vec * unitVec.k_vec; 
-    return resUnit;
+vecEu rotateMatrixinX(vecEu posV){
+
+    matRot mr = {0};
+
 }
